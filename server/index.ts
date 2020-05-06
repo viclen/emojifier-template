@@ -33,23 +33,19 @@ app.post('/', (req, res) => {
     }
   };
 
-  db.getFace(imageUrl, saved => {
-    if (saved && saved.faceAttributes) {
-      res.send(JSON.parse(saved.faceAttributes));
-    } else {
-      // TODO: Send Request to Face API
-      request.post(options, (error, response, body) => {
-        res.setHeader('Content-Type', 'application/json');
+  // TODO: Get the object from the database and place the following code in the callback
 
-        // TODO: Save Face API response to database
-        if (response.statusCode == "200") {
-          db.saveFace(imageUrl, JSON.stringify(body));
-        }
+  // TODO: Send Request to Face API
+  request.post(options, (error, response, body) => {
+    res.setHeader('Content-Type', 'application/json');
 
-        // TODO: Send Face API response to front-end
-        res.send(body);
-      });
+    // TODO: Save Face API response to database
+    if (response.statusCode == "200") {
+
     }
+
+    // TODO: Send Face API response to front-end
+    res.send(body);
   });
 });
 

@@ -35,20 +35,9 @@ export class AppComponent {
         const { height, width, left, top } = faceRectangle;
 
         // TODO: Add image to website here
-        const style = `position: absolute; height: ${height}px; width: ${width}px; left: ${left}px; top: ${top}px;`;
-        this.imageUrl = imageUrl;
-
-        const { emotion } = faceAttributes;
-        let mainEmotion;
-
-        Object.keys(emotion).forEach(key => {
-          if (!mainEmotion || emotion[key] > emotion[mainEmotion]) {
-            mainEmotion = key
-          }
-        });
-
-        // TODO: Add emoji to image here
-        this.htmlToAdd = `<img class="emoji" style="${style}" src="/assets/${mainEmotion}.png" />`;
+        
+        // TODO: Add emoji to image here with style
+        
       });
     });
   }
