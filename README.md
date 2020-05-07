@@ -1,6 +1,6 @@
-# mlh-localhost-emojifier-code
+# emojifier-template
 
-This repo contains the starter code for the workshop Intro to the MEAN Stack Powered by Blackrock
+This repo contains the starter code for the workshop Intro to the MEAN Stack
 
 Demo image link:
 
